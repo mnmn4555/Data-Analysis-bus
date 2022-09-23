@@ -28,10 +28,9 @@
 머신러닝 모델을 훈련하기 위해 여러 개의 모델을 적절하게 결합해 최종값을 도출하는 앙상블 모델을 이용하였다. 이 연구에는 Random Forest, XGboost, LightGBM, Adaboost, Gradient Tree Boosting 라이브러리를 사용하여 머신러닝 모델을 훈련한다.  
 
 * 추가한 데이터  
-앞에서 사용된 데이터 이외에도 퇴근 시간 버스 정류장 별 승차 인원을 예측할 때, 예측 인원에 영향을 미칠 수 있는 유가 가격 데이터를 추가한다.
+앞에서 사용된 데이터 이외에도 퇴근 시간 버스 정류장 별 승차 인원을 예측할 때, 예측 인원에 영향을 미칠 수 있는 유가, 날씨 데이터를 추가한다. 
 날짜별 유가 가격 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 1일부터 10월 16일까지 제주도 주유소 평균 휘발유, 경유 판매가격(화폐단위 : ￦)을 수집한다.  
-휘발유가격 경유가격  
-<img src = "https://user-images.githubusercontent.com/71176581/191965090-8aa2b9f7-823b-4ddf-82e9-534df890c2cb.png" width="150" height="200"> <img src = "https://user-images.githubusercontent.com/71176581/191965232-1f503541-3ab8-4863-8a77-5d32ee390829.png" width="150" height="200">
+휘발유가격 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 경유가격  
+<img src = "https://user-images.githubusercontent.com/71176581/191965090-8aa2b9f7-823b-4ddf-82e9-534df890c2cb.png" width="150" height="200"> <img src = "https://user-images.githubusercontent.com/71176581/191965232-1f503541-3ab8-4863-8a77-5d32ee390829.png" width="150" height="200">  
 
-
-
+![image](https://user-images.githubusercontent.com/71176581/191976155-47397365-bcea-4ea0-9643-645cee8602c1.png)
