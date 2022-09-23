@@ -29,8 +29,12 @@
 
 * 추가한 데이터  
 앞에서 사용된 데이터 이외에도 퇴근 시간 버스 정류장 별 승차 인원을 예측할 때, 예측 인원에 영향을 미칠 수 있는 유가, 날씨 데이터를 추가한다. 
-날짜별 유가 가격 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 1일부터 10월 16일까지 제주도 주유소 평균 휘발유, 경유 판매가격(화폐단위 : ￦)을 수집한다.  
+날짜별 유가 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 1일부터 10월 16일까지 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 수집한다. 날짜별 날씨 정보는 기상청 날씨누리 사이트를 이용하여 2019년 9월 한달 간 오전 6-11시 기온정보(°C), 오전 7-11시 강수량(mm) 정보를 수집한다.  
 휘발유가격 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 경유가격  
 <img src = "https://user-images.githubusercontent.com/71176581/191965090-8aa2b9f7-823b-4ddf-82e9-534df890c2cb.png" width="150" height="200"> <img src = "https://user-images.githubusercontent.com/71176581/191965232-1f503541-3ab8-4863-8a77-5d32ee390829.png" width="150" height="200">  
-
+날씨 정보  
 ![image](https://user-images.githubusercontent.com/71176581/191976155-47397365-bcea-4ea0-9643-645cee8602c1.png)
+
+![image](https://user-images.githubusercontent.com/71176581/191989735-22b0ef33-8ce1-4da5-ab6e-bad906ae0a34.png)  
+![image](https://user-images.githubusercontent.com/71176581/191989958-c1f962d8-7a06-4fa3-af3d-37b44a618100.png)  
+
