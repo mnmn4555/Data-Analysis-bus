@@ -9,7 +9,7 @@
 따라서, 2019년 9월 제주도 버스 정류장 별 승차 인원 데이터를 이용해 10월 퇴근 시간 버스 승차 인원 예측하고자 한다.  
 
 * 사용한 데이터  
-국내 데이터 경쟁 플랫폼인 DACON에서 진행된 ‘퇴근 시간 버스 승차 인원 예측 경진대회’의 데이터들은 이용하였다.  
+국내 데이터 경쟁 플랫폼인 DACON에서 진행된 ‘퇴근 시간 버스 승차 인원 예측 경진대회’의 데이터들은 이용한다.  
 > train.csv : 2019년 9월 각 날짜, 출근 시간(6시-12시)의 버스 정류장별 승하차 인원과 퇴근 시간(18시-20시)의 버스 정류장별 승차 인원 데이터  
 > test.csv : 2019년 10월 각 날짜, 출근 시간(6시-12시)의 버스 정류장별 승하차 인원  
 > weather.csv : 2019년 9월 제주도 전체 오전 10시 기상정보 데이터   
@@ -22,24 +22,41 @@
 ![image](https://user-images.githubusercontent.com/71176581/191956529-54f431b4-a272-4ccd-a1a4-fbad63f3f084.png)  
 본 연구는 2019년 9, 10월 제주도 출근 시간, 9월 퇴근 시간 버스 정류장별 승차 인원 데이터를 이용해 2019년 10월 제주도 퇴근 시간 버스 정류장별 승차 인원을 예측하는 것을 목표로 한다.  
 
+* train.csv 파일 
+<img src ="https://user-images.githubusercontent.com/71176581/192088832-e0661f9c-89bd-4675-be8a-336464218334.png" weight = "1674" height = "250">
+
 머신러닝 모델에 입력으로 들어갈 변수는 숫자 형태여야 하므로 숫자 형태가 아닌 변수를 제거하고 변수명 df 에 저장한다. 그런 다음, df 데이터를 모델 학습하기 위한 학습데이터와 학습데이터를 테스트하기 위한 테스트 데이터로 나눈다.  
 학습데이터, 테스트 데이터를 구분하는 cue 변수가 0인 경우 X_train으로, 1인 경우 X_test로 정의하고 훈련에 사용할 변수를 cue 값이 0인 경우의 18-20시에 버스 승차 인원수(18~20_ride)를 y_train으로 정의한다.
 
-머신러닝 모델을 훈련하기 위해 여러 개의 모델을 적절하게 결합해 최종값을 도출하는 앙상블 모델을 이용하였다. 이 연구에는 Random Forest, XGboost, LightGBM, Adaboost, Gradient Tree Boosting 라이브러리를 사용하여 머신러닝 모델을 훈련한다.  
+* RMSE (Root Mean Square Deviation: 평균 제곱근 오차)  
+추정값 또는 모델이 예측한 값과 실제 환경에서 관찰되는 값의 차이를 다룰 때 흔히 사용하는 측도로 정밀도를 표현할 때 적합하다. 실제 값(x)에서 예측값(y) 차이의 제곱 합을 데이터 전체(m) 데이터로 나눈 뒤, 제곱근을 구하면 RMSE가 구해진다. 예측한 퇴근시간 버스 승차인원이 실제 퇴근시간 버스 승차인원과 유사할수록 RMSE가 낮다. 이를 통해. RMSE가 낮을수록 학습이 잘된 모델로 평가할 수 있다.  
+
+머신러닝 모델을 훈련하기 위해 여러 개의 모델을 적절하게 결합해 최종값을 도출하는 앙상블 모델을 이용한다. 이 연구에는 Random Forest, LightGBM, Adaboost, Gradient Tree Boosting 라이브러리를 사용하여 머신러닝 모델을 훈련한다.  
+
+![image](https://user-images.githubusercontent.com/71176581/192089016-07f01bcc-ad3d-4fcb-88e7-0673a7dbe575.png)
 
 * 추가한 데이터  
-앞에서 사용된 데이터 이외에도 퇴근 시간 버스 정류장 별 승차 인원을 예측할 때, 예측 인원에 영향을 미칠 수 있는 유가, 날씨 데이터를 추가한다. 
-날짜별 유가 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 1일부터 10월 16일까지 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 수집한다. 날짜별 날씨 정보는 기상청 날씨누리 사이트를 이용하여 2019년 9월 한달 간 오전 6-11시 기온정보(°C), 오전 7-11시 강수량(mm) 정보를 수집한다.  
+퇴근 시간 버스 정류장 별 승차 인원을 예측할 때, 예측 인원에 영향을 미칠 수 있는 유가, 날씨 데이터를 train.csv에 추가한다.
+날짜별 유가 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 한달간 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 수집한다. 날짜별 날씨 정보는 기상청 날씨누리 사이트를 이용하여 2019년 9월 한달 간 오전 6-11시 기온정보(°C), 오전 7-11시 강수량(mm) 정보를 수집한다.  
 
-날씨 정보  
-![image](https://user-images.githubusercontent.com/71176581/191976155-47397365-bcea-4ea0-9643-645cee8602c1.png)
+> 유가 정보
+> ![image](https://user-images.githubusercontent.com/71176581/192081726-3d0023a0-32a5-4c8d-b10e-8ec8f373a095.png)  
+> ![image](https://user-images.githubusercontent.com/71176581/192081739-05124347-4c82-4439-a902-0653b7f687f3.png)  
 
-![image](https://user-images.githubusercontent.com/71176581/191989735-22b0ef33-8ce1-4da5-ab6e-bad906ae0a34.png)  
-![image](https://user-images.githubusercontent.com/71176581/191989958-c1f962d8-7a06-4fa3-af3d-37b44a618100.png)  
+> 날씨 정보  
+> ![image](https://user-images.githubusercontent.com/71176581/191976155-47397365-bcea-4ea0-9643-645cee8602c1.png)
+
+
+* GridSearchCV  
+GridSearchCV는 scikit-learn에서 분류, 회귀 알고리즘에 사용되는 하이퍼파라미터를 순차적으로 입력해 학습,측정 과정을 통해 가장 적합한 파라미터를 알려주는 것이다. 위 연구에서 퇴근시간 버스 승차인원을 예측하는데 좋은 성능을 보였던 Randomforest, AdaBoost, LightGBM 알고리즘을 사용해 GridSearchCV를 진행했다. 그 결과는 다음과 같다.
+> RandomForest  
+> ![image](https://user-images.githubusercontent.com/71176581/191989735-22b0ef33-8ce1-4da5-ab6e-bad906ae0a34.png)  
+> AdaBoost  
+> ![image](https://user-images.githubusercontent.com/71176581/191989958-c1f962d8-7a06-4fa3-af3d-37b44a618100.png)  
+> LightGBM  
 ![image](https://user-images.githubusercontent.com/71176581/191990363-3c4c92cc-9d8a-4436-9e82-9a47006204ba.png)  
-  
-![image](https://user-images.githubusercontent.com/71176581/192081726-3d0023a0-32a5-4c8d-b10e-8ec8f373a095.png)  
-![image](https://user-images.githubusercontent.com/71176581/192081739-05124347-4c82-4439-a902-0653b7f687f3.png)  
+각 알고리즘별 최적 하이퍼파라미터를 이용해서 RMSE를 구한다.
+
 ![image](https://user-images.githubusercontent.com/71176581/192081751-7ce780aa-eaea-4138-a1fd-ac6be69d2c30.png)  
 ![image](https://user-images.githubusercontent.com/71176581/192081758-4d2133d9-9739-42e5-af46-96ea04d1c43c.png)  
 ![image](https://user-images.githubusercontent.com/71176581/192081780-e5d40d7f-7dc4-40fb-a9bd-5db0d9d17e63.png)  
