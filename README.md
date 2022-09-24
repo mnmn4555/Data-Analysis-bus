@@ -31,18 +31,12 @@
 앞에서 사용된 데이터 이외에도 퇴근 시간 버스 정류장 별 승차 인원을 예측할 때, 예측 인원에 영향을 미칠 수 있는 유가, 날씨 데이터를 추가한다. 
 날짜별 유가 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 1일부터 10월 16일까지 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 수집한다. 날짜별 날씨 정보는 기상청 날씨누리 사이트를 이용하여 2019년 9월 한달 간 오전 6-11시 기온정보(°C), 오전 7-11시 강수량(mm) 정보를 수집한다.  
 휘발유가격 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 경유가격  
-<img src = "https://user-images.githubusercontent.com/71176581/191965090-8aa2b9f7-823b-4ddf-82e9-534df890c2cb.png" width="150" height="200"> <img src = "https://user-images.githubusercontent.com/71176581/191965232-1f503541-3ab8-4863-8a77-5d32ee390829.png" width="150" height="200">  
+<img src = "https://user-images.githubusercontent.com/71176581/191965090-8aa2b9f7-823b-4ddf-82e9-534df890c2cb.png" width="400" height="300"> <img src = "https://user-images.githubusercontent.com/71176581/191965232-1f503541-3ab8-4863-8a77-5d32ee390829.png" width="150" height="200">  
 날씨 정보  
 ![image](https://user-images.githubusercontent.com/71176581/191976155-47397365-bcea-4ea0-9643-645cee8602c1.png)
 
-![image](https://user-images.githubusercontent.com/71176581/191989735-22b0ef33-8ce1-4da5-ab6e-bad906ae0a34.png)  
-![image](https://user-images.githubusercontent.com/71176581/191989958-c1f962d8-7a06-4fa3-af3d-37b44a618100.png)  
-![image](https://user-images.githubusercontent.com/71176581/191990363-3c4c92cc-9d8a-4436-9e82-9a47006204ba.png)  
-  
-![image](https://user-images.githubusercontent.com/71176581/191992468-8e24d9c4-1883-41ea-b202-b34c748d8c3d.png) 
-![image](https://user-images.githubusercontent.com/71176581/191992686-82eaa342-d835-41c8-8715-e4787c95ef20.png)
+![image](https://user-images.githubusercontent.com/71176581/192077431-5b46cc18-5a23-4e84-9327-3cf23955a749.png)  
+![image](https://user-images.githubusercontent.com/71176581/192077519-068eade8-ded0-4d78-81af-69022adf56ee.png)  
 
-![image](https://user-images.githubusercontent.com/71176581/191994371-9cf403e7-360e-4a95-a333-2a525758f704.png)
-![image](https://user-images.githubusercontent.com/71176581/191993886-4d5da3fe-3e43-439a-80de-7f04fc5ecc3b.png)
-
-![image](https://user-images.githubusercontent.com/71176581/192001627-fab4cb22-72e0-4829-8fe6-9a439a8859e7.png)  
+![image](https://user-images.githubusercontent.com/71176581/192077619-7e4b6105-395f-4494-bc5e-48aa9dd29662.png)  
+![image](https://user-images.githubusercontent.com/71176581/192077625-b2bd9a78-6881-420a-b255-59d8f639edd9.png)  
