@@ -34,15 +34,15 @@
 이 연구에는 Random Forest, LightGBM, Adaboost, Gradient Tree Boosting 라이브러리를 사용하여 머신러닝 모델을 훈련한다.  
 
 * 알고리즘 별 모델 상관계수, 임시 스코어  
-여기서 말하는 임시 스코어는 Dacon 사이트에 학습한 모델 파일을 제출했을 때 보이는 public score RMSE로 과적합을 방지하여 실제 값과 차이를 구한 스코어를 기준으로 연구를 진행한다. 
-![image](https://user-images.githubusercontent.com/71176581/192127689-0e40689d-f8c1-45d5-ae56-7aaaf7d52631.png)
+여기서 말하는 임시 스코어는 Dacon 사이트에 학습한 모델 파일을 제출했을 때 보이는 public score RMSE로 과적합을 방지하여 실제 값과 차이를 구한 스코어를 기준으로 연구를 진행한다.  
+![image](https://user-images.githubusercontent.com/71176581/192127997-7bd1bc8e-0487-4e41-b9ae-004a85a8ca69.png)
 ![image](https://user-images.githubusercontent.com/71176581/192127733-75bf1794-e1ed-4f2d-ad49-731d8f31af5e.png)  
 
 ![image](https://user-images.githubusercontent.com/71176581/192127886-eb44f279-0c2f-46c0-9171-28de306f7aef.png)
 ![image](https://user-images.githubusercontent.com/71176581/192127892-ef1f7385-443d-4fbc-b619-8fd5ca7bc743.png)  
 
-![image](https://user-images.githubusercontent.com/71176581/192127946-2de88970-57b2-472e-ab5c-49cf9697005b.png)
-![image](https://user-images.githubusercontent.com/71176581/192089016-07f01bcc-ad3d-4fcb-88e7-0673a7dbe575.png)  
+![image](https://user-images.githubusercontent.com/71176581/192128012-af45ab85-24cd-40a2-98bf-25bfa72752bc.png)
+![image](https://user-images.githubusercontent.com/71176581/192127965-5e60db5e-afe4-44ee-9c06-e76e99730ea0.png)
 
 * 추가 연구  
 앞서 진행했던 연구는 2019년 10월 퇴근시간 버스 승차 인원의 실제 정보가 없어서 실제 예측했던 모델의 정확도를 판단하기에는 어려웠다. 따라서 2019년 9월 한달간 제주도 버스 정류장별 날짜별 실제 퇴근시간 버스 승차 인원 정보와 예측했던 퇴근시간 버스 승차 인원정보가 얼마나 정확하게 예측했는지 알아보고자 추가 연구를 진행하게 되었다.  
