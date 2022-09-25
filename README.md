@@ -36,13 +36,19 @@
 * 알고리즘 별 모델 상관계수, 임시 스코어  
 여기서 말하는 임시 스코어는 Dacon 사이트에 학습한 모델 파일을 제출했을 때 보이는 public score RMSE로 과적합을 방지하여 실제 값과 차이를 구한 스코어를 기준으로 연구를 진행한다.  
 ![image](https://user-images.githubusercontent.com/71176581/192128088-770db020-0c36-474b-9e2c-003f33897783.png)
-![image](https://user-images.githubusercontent.com/71176581/192127733-75bf1794-e1ed-4f2d-ad49-731d8f31af5e.png)  
+<img scr ="https://user-images.githubusercontent.com/71176581/192127733-75bf1794-e1ed-4f2d-ad49-731d8f31af5e.png" weight = "100" height " 50">
+![image](https://user-images.githubusercontent.com/71176581/192128193-53e3ffe2-1207-45d1-afce-bda20a86bb09.png)  
 
 ![image](https://user-images.githubusercontent.com/71176581/192128096-0b7d3d2e-2e59-4ee5-8b3f-c7935038aadb.png)
-![image](https://user-images.githubusercontent.com/71176581/192127892-ef1f7385-443d-4fbc-b619-8fd5ca7bc743.png)  
+<img scr ="https://user-images.githubusercontent.com/71176581/192127892-ef1f7385-443d-4fbc-b619-8fd5ca7bc743.png" weight = "100" height " 50">
+![image](https://user-images.githubusercontent.com/71176581/192128206-5c0ab19a-41b8-4aea-80b5-64e4ab993141.png)
 
 ![image](https://user-images.githubusercontent.com/71176581/192128109-17f2546c-b6d4-43e6-a54b-4c47c3decbc3.png)
-![image](https://user-images.githubusercontent.com/71176581/192127965-5e60db5e-afe4-44ee-9c06-e76e99730ea0.png)
+<img scr ="https://user-images.githubusercontent.com/71176581/192127965-5e60db5e-afe4-44ee-9c06-e76e99730ea0.png" weight = "100" height " 50">
+![image](https://user-images.githubusercontent.com/71176581/192128213-a6d23316-372b-4407-a613-60da874f2e8b.png)
+
+
+![image](https://user-images.githubusercontent.com/71176581/192128186-94da5a77-d8a6-481d-9797-3fc628ef33ee.png)
 
 * 추가 연구  
 앞서 진행했던 연구는 2019년 10월 퇴근시간 버스 승차 인원의 실제 정보가 없어서 실제 예측했던 모델의 정확도를 판단하기에는 어려웠다. 따라서 2019년 9월 한달간 제주도 버스 정류장별 날짜별 실제 퇴근시간 버스 승차 인원 정보와 예측했던 퇴근시간 버스 승차 인원정보가 얼마나 정확하게 예측했는지 알아보고자 추가 연구를 진행하게 되었다.  
