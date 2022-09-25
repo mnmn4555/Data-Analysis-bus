@@ -68,6 +68,14 @@ train.csv에 유가, 날씨 요소를 추가한 데이터를 이용해 RandomFor
 유가 Data Scaling 후  
 ![image](https://user-images.githubusercontent.com/71176581/192081758-4d2133d9-9739-42e5-af46-96ea04d1c43c.png)  
 위 2개 그래프를 보면 유가 정보를 스케일링 전, 후 데이터를 이용해 생성된 RMSE가 크게 차이없는 것을 볼 수 있다. 따라서 유가 정보 스케일링 없어도 정확한 머신러닝 학습이 된다고 본다.  
+* 모델 앙상블  
+여러 모델들을 사용해 성능을 올려 더욱 일반화된 모델을 완성하는 기법으로, 대표적으로 Voting, Bagging, Stacking이 있다.  
+- Voting  
+다른 알고리즘 model을 조합하여 투표를 통해 결과를 도출하는 방식으로 AdaBoost, RandomForest, LightGBM 모델을 조합하여 5번의 교차검증을 통해 RMSE 평균값을 구한다.  
 ![image](https://user-images.githubusercontent.com/71176581/192081780-e5d40d7f-7dc4-40fb-a9bd-5db0d9d17e63.png)  
+- Bagging (Bootstrap Aggregating)  
+여러 개의 데이터 중첩을 허용하여 샘플 중복 생성을 통해 결과를 도출하는 방식으로 AdaBoost, RandomForest, LightGBM 각각 알고리즘을 5번 교차검증하여 RMSE 평균값을 구한다.
 ![image](https://user-images.githubusercontent.com/71176581/192081792-07f4c33b-06ab-4ab5-ae54-918b577cb2f2.png)  
+- Voting  
+여러 모델을 기반으로 예측된 결과를 통해 meta 모델이 다시 한번 예측하는 방식으로 AdaBoost, RandomForest, LightGBM 중 1개 모델을 meta 모델로 지정하여 5번의 교차검증을 통해 RMSE 평균값을 구한다.  
 ![image](https://user-images.githubusercontent.com/71176581/192081872-3af0b689-e9a1-4672-bd11-79865c2eb1ee.png)  
