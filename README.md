@@ -35,13 +35,13 @@
 
 * 알고리즘 별 모델 상관계수, 임시 스코어  
 여기서 말하는 임시 스코어는 Dacon 사이트에 학습한 모델 파일을 제출했을 때 보이는 public score RMSE로 과적합을 방지하여 실제 값과 차이를 구한 스코어를 기준으로 연구를 진행한다.  
-![image](https://user-images.githubusercontent.com/71176581/192127997-7bd1bc8e-0487-4e41-b9ae-004a85a8ca69.png)
+![image](https://user-images.githubusercontent.com/71176581/192128088-770db020-0c36-474b-9e2c-003f33897783.png)
 ![image](https://user-images.githubusercontent.com/71176581/192127733-75bf1794-e1ed-4f2d-ad49-731d8f31af5e.png)  
 
-![image](https://user-images.githubusercontent.com/71176581/192127886-eb44f279-0c2f-46c0-9171-28de306f7aef.png)
+![image](https://user-images.githubusercontent.com/71176581/192128096-0b7d3d2e-2e59-4ee5-8b3f-c7935038aadb.png)
 ![image](https://user-images.githubusercontent.com/71176581/192127892-ef1f7385-443d-4fbc-b619-8fd5ca7bc743.png)  
 
-![image](https://user-images.githubusercontent.com/71176581/192128012-af45ab85-24cd-40a2-98bf-25bfa72752bc.png)
+![image](https://user-images.githubusercontent.com/71176581/192128109-17f2546c-b6d4-43e6-a54b-4c47c3decbc3.png)
 ![image](https://user-images.githubusercontent.com/71176581/192127965-5e60db5e-afe4-44ee-9c06-e76e99730ea0.png)
 
 * 추가 연구  
