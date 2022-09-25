@@ -79,3 +79,8 @@ train.csv에 유가, 날씨 요소를 추가한 데이터를 이용해 RandomFor
 - Voting  
 여러 모델을 기반으로 예측된 결과를 통해 meta 모델이 다시 한번 예측하는 방식으로 AdaBoost, RandomForest, LightGBM 중 1개 모델을 meta 모델로 지정하여 5번의 교차검증을 통해 RMSE 평균값을 구한다.  
 ![image](https://user-images.githubusercontent.com/71176581/192081872-3af0b689-e9a1-4672-bd11-79865c2eb1ee.png)  
+
+* 알고리즘 간 상관관계  
+교차검증에 사용한 csv파일을 이용해 AdaBoost, RandomForest, LightGBM 알고리즘 간 상관관계는 다음과 같다. 그 결과 RandomForest와 LightGBM 알고리즘은 높은 상관도를 보이고 있고 AdaBoost는 다른 알고리즘과 낮은 상관도를 보이고 있다.
+> ![image](https://user-images.githubusercontent.com/71176581/192126559-ae19b6bd-7f97-44b7-994f-b5e22fbd2fe3.png)  
+
