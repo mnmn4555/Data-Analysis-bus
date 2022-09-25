@@ -19,26 +19,37 @@
 > jeju_financial_life_data.csv : 제주도 우편번호를 단위로 구분한 금융 생활 통계 자료 (경도, 위도, 직업군별 비율, 평균 연소득, 평균 소비액)  
 
 * RMSE (Root Mean Square Deviation: 평균 제곱근 오차)  
-추정값 또는 모델이 예측한 값과 실제 환경에서 관찰되는 값의 차이를 다룰 때 흔히 사용하는 측도로 정밀도를 표현할 때 적합하다. 실제 값(x)에서 예측값(y) 차이의 제곱 합을 데이터 전체(m) 데이터로 나눈 뒤, 제곱근을 구하면 RMSE가 구해진다. 예측한 퇴근시간 버스 승차인원이 실제 퇴근시간 버스 승차인원과 유사할수록 RMSE가 낮다. 이를 통해. RMSE가 낮을수록 학습이 잘된 모델로 평가할 수 있다.  
+추정값 또는 모델이 예측한 값과 실제 환경에서 관찰되는 값의 차이를 다룰 때 흔히 사용하는 측도로 정밀도를 표현할 때 적합하다. 실제 값(x)에서 예측값(y) 차이의 제곱 합을 데이터 전체(m) 데이터로 나눈 뒤, 제곱근을 구하면 RMSE가 구해진다. 예측한 퇴근시간 버스 승차인원이 실제 퇴근시간 버스 승차인원과 유사할수록 RMSE가 낮다. 이를 통해. RMSE가 낮을수록 학습이 잘된 모델로 평가할 수 있다.  ![image](https://user-images.githubusercontent.com/71176581/192127456-f3ca3b88-0d91-4b87-87d6-0b418ee445ae.png)
+
 
 * 분석 목표  
 ![image](https://user-images.githubusercontent.com/71176581/191956529-54f431b4-a272-4ccd-a1a4-fbad63f3f084.png)  
 본 연구는 2019년 9, 10월 제주도 출근 시간, 9월 퇴근 시간 버스 정류장별 승차 인원 데이터를 이용해 2019년 10월 제주도 퇴근 시간 버스 정류장별 승차 인원을 예측하는 것을 목표로 한다.  
-
-* train.csv 파일 
-<img src ="https://user-images.githubusercontent.com/71176581/192088832-e0661f9c-89bd-4675-be8a-336464218334.png" weight = "1674" height = "200">
-
 머신러닝 모델에 입력으로 들어갈 변수는 숫자 형태여야 하므로 숫자 형태가 아닌 변수를 제거하고 변수명 df 에 저장한다. 그런 다음, df 데이터를 모델 학습하기 위한 학습데이터와 학습데이터를 테스트하기 위한 테스트 데이터로 나눈다.  
 학습데이터, 테스트 데이터를 구분하는 cue 변수가 0인 경우 X_train으로, 1인 경우 X_test로 정의하고 훈련에 사용할 변수를 cue 값이 0인 경우의 18-20시에 버스 승차 인원수(18~20_ride)를 y_train으로 정의한다.  
-머신러닝 모델을 훈련하기 위해 여러 개의 모델을 적절하게 결합해 최종값을 도출하는 앙상블 모델을 이용한다. 이 연구에는 Random Forest, LightGBM, Adaboost, Gradient Tree Boosting 라이브러리를 사용하여 머신러닝 모델을 훈련한다.  
 
-![image](https://user-images.githubusercontent.com/71176581/192089016-07f01bcc-ad3d-4fcb-88e7-0673a7dbe575.png)
+
+머신러닝 모델을 훈련하기 위해 여러 개의 모델을 적절하게 결합해 최종값을 도출하는 앙상블 모델을 이용한다. 모델 구축에 사용할 데이터는 다음과 같다.  
+![image](https://user-images.githubusercontent.com/71176581/192127642-fb255611-bff7-41dc-a591-e02bc46b7211.png)  
+이 연구에는 Random Forest, LightGBM, Adaboost, Gradient Tree Boosting 라이브러리를 사용하여 머신러닝 모델을 훈련한다.  
+
+* 알고리즘 별 모델 상관계수, 임시 스코어  
+여기서 말하는 임시 스코어는 Dacon 사이트에 학습한 모델 파일을 제출했을 때 보이는 public score RMSE로 과적합을 방지하여 실제 값과 차이를 구한 스코어를 기준으로 연구를 진행한다. 
+![image](https://user-images.githubusercontent.com/71176581/192127689-0e40689d-f8c1-45d5-ae56-7aaaf7d52631.png)
+![image](https://user-images.githubusercontent.com/71176581/192127733-75bf1794-e1ed-4f2d-ad49-731d8f31af5e.png)  
+
+![image](https://user-images.githubusercontent.com/71176581/192127886-eb44f279-0c2f-46c0-9171-28de306f7aef.png)
+![image](https://user-images.githubusercontent.com/71176581/192127892-ef1f7385-443d-4fbc-b619-8fd5ca7bc743.png)  
+
+![image](https://user-images.githubusercontent.com/71176581/192127946-2de88970-57b2-472e-ab5c-49cf9697005b.png)
+![image](https://user-images.githubusercontent.com/71176581/192089016-07f01bcc-ad3d-4fcb-88e7-0673a7dbe575.png)  
 
 * 추가 연구  
 앞서 진행했던 연구는 2019년 10월 퇴근시간 버스 승차 인원의 실제 정보가 없어서 실제 예측했던 모델의 정확도를 판단하기에는 어려웠다. 따라서 2019년 9월 한달간 제주도 버스 정류장별 날짜별 실제 퇴근시간 버스 승차 인원 정보와 예측했던 퇴근시간 버스 승차 인원정보가 얼마나 정확하게 예측했는지 알아보고자 추가 연구를 진행하게 되었다.  
-입력 데이터는 train.csv에서 2019년 9월 날짜별 정류장, 버스 노선, 시간대별 승차인원과 2019년 9월 한달 간 제주도 유가, 날씨정보를 이용한다. 출력 데이터는 날짜별 저녁 승차 인원이다.  
-scikit-learn에서 제공하는 train_test_split를 이용하여 학습 데이터는 전체 입력데이터 중에 80%, 테스트 데이터는 20%로 무작위하게 나눴다.
-![image](https://user-images.githubusercontent.com/71176581/192127130-269a80a2-f621-4c25-989e-2a2df77400ee.png)  
+입력 데이터는 train.csv에서 2019년 9월 날짜별 정류장, 버스 노선, 시간대별 승차인원과 2019년 9월 한달 간 제주도 유가, 날씨정보를 추가로 이용한다. 출력 데이터는 날짜별 저녁 승차 인원이다.  
+
+* train.csv 파일 
+<img src ="https://user-images.githubusercontent.com/71176581/192088832-e0661f9c-89bd-4675-be8a-336464218334.png" weight = "1674" height = "200">
 
 * 추가한 데이터  
 퇴근 시간 버스 정류장 별 승차 인원을 예측할 때, 예측 인원에 영향을 미칠 수 있는 유가, 날씨 데이터를 train.csv에 추가한다.
@@ -53,8 +64,10 @@ scikit-learn에서 제공하는 train_test_split를 이용하여 학습 데이�
 > ![image](https://user-images.githubusercontent.com/71176581/192081739-05124347-4c82-4439-a902-0653b7f687f3.png)  
 
 > 날씨 정보  
-> ![image](https://user-images.githubusercontent.com/71176581/191976155-47397365-bcea-4ea0-9643-645cee8602c1.png)
+> ![image](https://user-images.githubusercontent.com/71176581/191976155-47397365-bcea-4ea0-9643-645cee8602c1.png)  
 
+scikit-learn에서 제공하는 train_test_split를 이용하여 학습 데이터는 전체 입력데이터 중에 80%, 테스트 데이터는 20%로 무작위하게 나눴다.
+![image](https://user-images.githubusercontent.com/71176581/192127130-269a80a2-f621-4c25-989e-2a2df77400ee.png)  
 
 * GridSearchCV  
 GridSearchCV는 scikit-learn에서 분류, 회귀 알고리즘에 사용되는 하이퍼파라미터를 순차적으로 입력해 학습,측정 과정을 통해 가장 적합한 파라미터를 알려주는 것이다. 위 연구에서 퇴근시간 버스 승차인원을 예측하는데 좋은 성능을 보였던 Randomforest, AdaBoost, LightGBM 알고리즘을 사용해 GridSearchCV를 진행했다. 그 결과는 다음과 같다.
