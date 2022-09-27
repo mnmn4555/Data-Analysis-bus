@@ -35,7 +35,7 @@
 여기서 말하는 임시 스코어는 Dacon 사이트에 학습한 모델 파일을 제출했을 때 보이는 public score RMSE로 과적합을 방지하여 실제 값과 차이를 구한 스코어를 기준으로 연구를 진행한다.  
 > 1. RandomForest, LightGBM 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
 > 
-> <img src ="https://user-images.githubusercontent.com/71176581/192128088-770db020-0c36-474b-9e2c-003f33897783.png" weight = "200" height = "200">
+> <img src ="https://user-images.githubusercontent.com/71176581/192128088-770db020-0c36-474b-9e2c-003f33897783.png" weight = "100" height = "100">
 > <img src ="https://user-images.githubusercontent.com/71176581/192410519-4eb5f12e-dd36-4a16-9838-d660d3aedc3e.png" weight = "350" height = "200">
 > <img src="https://user-images.githubusercontent.com/71176581/192128300-4248b41c-1b6c-4a42-b779-10209f20a42a.png" weight = "300" height = "200">  
 > 2. AdaBoost 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
