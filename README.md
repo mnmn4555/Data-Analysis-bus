@@ -33,19 +33,22 @@
 
 * 알고리즘 별 모델 상관계수, 임시 스코어  
 여기서 말하는 임시 스코어는 Dacon 사이트에 학습한 모델 파일을 제출했을 때 보이는 public score RMSE로 과적합을 방지하여 실제 값과 차이를 구한 스코어를 기준으로 연구를 진행한다.  
-> * RandomForest, LightGBM 상관계수·임시계수와 10월 퇴근시간 승차인원 예측  
+> * RandomForest, LightGBM 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
+> 
 > ![image](https://user-images.githubusercontent.com/71176581/192128088-770db020-0c36-474b-9e2c-003f33897783.png)
 > <img src="https://user-images.githubusercontent.com/71176581/192128354-575c5e4d-5c61-4fa7-9f80-3eb231b70f0a.png" weight = "350" height = "200">
 > <img src="https://user-images.githubusercontent.com/71176581/192128300-4248b41c-1b6c-4a42-b779-10209f20a42a.png" weight = "300" height = "200">
-> * RandomForest, LightGBM 상관계수·임시계수와 10월 퇴근시간 승차인원 예측  
+> * AdaBoost 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
+> 
 > ![image](https://user-images.githubusercontent.com/71176581/192128096-0b7d3d2e-2e59-4ee5-8b3f-c7935038aadb.png)
 > <img src ="https://user-images.githubusercontent.com/71176581/192127892-ef1f7385-443d-4fbc-b619-8fd5ca7bc743.png" weight = "350" height = "200">
 > <img src ="https://user-images.githubusercontent.com/71176581/192128206-5c0ab19a-41b8-4aea-80b5-64e4ab993141.png" weight = "300" height = "200">
-> * RandomForest, LightGBM 상관계수·임시계수와 10월 퇴근시간 승차인원 예측  
+> * Gradient Tree Boosting 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
+> 
 > ![image](https://user-images.githubusercontent.com/71176581/192128109-17f2546c-b6d4-43e6-a54b-4c47c3decbc3.png)
 > <img src ="https://user-images.githubusercontent.com/71176581/192127965-5e60db5e-afe4-44ee-9c06-e76e99730ea0.png" weight = "350" height = "200">
 > <img src ="https://user-images.githubusercontent.com/71176581/192128213-a6d23316-372b-4407-a613-60da874f2e8b.png" weight = "300" height = "200">
-
+> AdaBoost를 이용해 구한 10월 퇴근시간 버스 승차인원은 다른 알고리즘을 이용해 나온 퇴근시간 버스 승차인원에 비해 현저히 높은 수치의 값이 보여진다. 따라서 AdaBoost는 이 연구에는 적합하지 않은 알고리즘이다. 한가지 아쉬운점이 있다면 실제 2019년 10월 제주도 버스 퇴근시간 승차인원 정보를 구할수 없어 알고리즘들을 이용해 예측한 퇴근시간 승차인원과 비교할 수가 없었다. 
 
 ![image](https://user-images.githubusercontent.com/71176581/192128186-94da5a77-d8a6-481d-9797-3fc628ef33ee.png)
 
