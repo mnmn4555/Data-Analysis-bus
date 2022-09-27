@@ -40,7 +40,7 @@
 > <img src ="https://user-images.githubusercontent.com/71176581/192128300-4248b41c-1b6c-4a42-b779-10209f20a42a.png" weight = "300" height = "200">
 >
 > 2. AdaBoost 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
-> <img src ="https://user-images.githubusercontent.com/71176581/192128096-0b7d3d2e-2e59-4ee5-8b3f-c7935038aadb.png" weight = "100" height = "100">
+> <img src ="https://user-images.githubusercontent.com/71176581/192128096-0b7d3d2e-2e59-4ee5-8b3f-c7935038aadb.png" weight = "80" height = "80">
 > <img src ="https://user-images.githubusercontent.com/71176581/192410590-be527a97-3f1f-423a-91ac-bb1016d168cc.png" weight = "200" height = "200">
 > <img src ="https://user-images.githubusercontent.com/71176581/192128206-5c0ab19a-41b8-4aea-80b5-64e4ab993141.png" weight = "300" height = "200">  
 > 
