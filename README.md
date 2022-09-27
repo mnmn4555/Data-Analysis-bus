@@ -85,7 +85,7 @@
 > 날씨 정보  
 > ![image](https://user-images.githubusercontent.com/71176581/191976155-47397365-bcea-4ea0-9643-645cee8602c1.png)  
 
-scikit-learn에서 제공하는 train_test_split를 이용하여 학습 데이터는 전체 입력데이터 중에 80%, 테스트 데이터는 20%로 무작위하게 나눴다.
+scikit-learn에서 제공하는 train_test_split를 이용하여 학습 데이터는 전체 입력데이터 중에 80%, 테스트 데이터는 20%로 무작위하게 나눴다.  
 ![image](https://user-images.githubusercontent.com/71176581/192127130-269a80a2-f621-4c25-989e-2a2df77400ee.png)  
 
 * GridSearchCV  
@@ -105,6 +105,7 @@ train.csv에 유가, 날씨 요소를 추가한 데이터를 이용해 RandomFor
 > 유가 Data Scaling 후  
 > ![image](https://user-images.githubusercontent.com/71176581/192081758-4d2133d9-9739-42e5-af46-96ea04d1c43c.png)  
 > 위 2개 그래프를 보면 유가 정보를 스케일링 전, 후 데이터를 이용해 생성된 RMSE가 크게 차이없는 것을 볼 수 있다. 따라서 유가 정보 스케일링 없어도 정확한 머신러닝 학습이 된다고 본다.  
+
 * 모델 앙상블  
 여러 모델들을 사용해 성능을 올려 더욱 일반화된 모델을 완성하는 기법으로, 대표적으로 Voting, Bagging, Stacking이 있다.  
 > Voting  
