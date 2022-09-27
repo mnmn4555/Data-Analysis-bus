@@ -36,26 +36,28 @@
 > 1. RandomForest, LightGBM 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
 > 
 > ![image](https://user-images.githubusercontent.com/71176581/192128088-770db020-0c36-474b-9e2c-003f33897783.png)
-> <img src="https://user-images.githubusercontent.com/71176581/192128354-575c5e4d-5c61-4fa7-9f80-3eb231b70f0a.png" weight = "350" height = "200">
-> <img src="https://user-images.githubusercontent.com/71176581/192128300-4248b41c-1b6c-4a42-b779-10209f20a42a.png" weight = "300" height = "200">
+> <img src ="https://user-images.githubusercontent.com/71176581/192410519-4eb5f12e-dd36-4a16-9838-d660d3aedc3e.png" weight = "350" height = "200">
+> <img src="https://user-images.githubusercontent.com/71176581/192128300-4248b41c-1b6c-4a42-b779-10209f20a42a.png" weight = "300" height = "200">  
 > 2. AdaBoost 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
 > 
 > ![image](https://user-images.githubusercontent.com/71176581/192128096-0b7d3d2e-2e59-4ee5-8b3f-c7935038aadb.png)
-> <img src ="https://user-images.githubusercontent.com/71176581/192127892-ef1f7385-443d-4fbc-b619-8fd5ca7bc743.png" weight = "350" height = "200">
-> <img src ="https://user-images.githubusercontent.com/71176581/192128206-5c0ab19a-41b8-4aea-80b5-64e4ab993141.png" weight = "300" height = "200">
+> <img src ="https://user-images.githubusercontent.com/71176581/192410590-be527a97-3f1f-423a-91ac-bb1016d168cc.png" weight = "350" height = "200">
+> <img src ="https://user-images.githubusercontent.com/71176581/192128206-5c0ab19a-41b8-4aea-80b5-64e4ab993141.png" weight = "300" height = "200">  
 > 3. Gradient Tree Boosting 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
 > 
 > ![image](https://user-images.githubusercontent.com/71176581/192128109-17f2546c-b6d4-43e6-a54b-4c47c3decbc3.png)
-> <img src ="https://user-images.githubusercontent.com/71176581/192127965-5e60db5e-afe4-44ee-9c06-e76e99730ea0.png" weight = "350" height = "200">
+> <img src = "https://user-images.githubusercontent.com/71176581/192410672-f0981586-b124-4610-af36-f7bc4a404a9d.png" weight = "350" height = "200">
 > <img src ="https://user-images.githubusercontent.com/71176581/192128213-a6d23316-372b-4407-a613-60da874f2e8b.png" weight = "300" height = "200">  
 > AdaBoost를 이용해 구한 10월 퇴근시간 버스 승차인원은 다른 알고리즘을 이용해 나온 퇴근시간 버스 승차인원에 비해 현저히 높은 수치의 값이 보여진다. 따라서 AdaBoost는 이 연구에는 적합하지 않은 알고리즘이다. 한가지 아쉬운점이 있다면 실제 2019년 10월 제주도 버스 퇴근시간 승차인원 정보를 구할수 없어 알고리즘들을 이용해 예측한 퇴근시간 승차인원과 비교할 수가 없었다. 
-> * 추가 데이터  
-> 많은 데이터 중 유가 정보가 퇴근시간 버스 승차인원 예측에 영향을 줄 수 있다고 생각한다. 날짜별 유가 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 1일 ~ 2019년 10월 16일 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 이용한다.  
+
+ * 추가 데이터  
+많은 데이터 중 유가 정보가 퇴근시간 버스 승차인원 예측에 영향을 줄 수 있다고 생각한다. 날짜별 유가 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 1일 ~ 2019년 10월 16일 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 이용한다.  
 > * RandomForest, LightGBM, Gradient Tree Boosting(1,3번 이용) 상관계수·임시계수  
 > 유가 정보 추가 전   
 > <img src = "https://user-images.githubusercontent.com/71176581/192409665-0bc39b4f-0d32-43be-b32b-396a6ecfde5a.png" weight = "450" height = "300">  
 > 유가 정보 추가 후  
 > <img src = "https://user-images.githubusercontent.com/71176581/192409679-2f61c235-52c0-480a-b4af-056bcd75f929.png" weight = "450" height = "300">  
+> 유가 정보를 추가하고나서 전반적으로 임시 스코어와 상관계수 값이 높아져 퇴근시간 버스 승차인원을 더 정확하게 예측할 수 있다.  
 
 
 * 추가 연구  
