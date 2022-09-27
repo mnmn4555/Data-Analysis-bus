@@ -49,8 +49,7 @@
 > <img src = "https://user-images.githubusercontent.com/71176581/192128109-17f2546c-b6d4-43e6-a54b-4c47c3decbc3.png" weight = "100" height = "100">
 > <img src = "https://user-images.githubusercontent.com/71176581/192410672-f0981586-b124-4610-af36-f7bc4a404a9d.png" weight = "250" height = "200">
 > <img src ="https://user-images.githubusercontent.com/71176581/192128213-a6d23316-372b-4407-a613-60da874f2e8b.png" weight = "300" height = "200">  
->
-> AdaBoost를 이용해 구한 10월 퇴근시간 버스 승차인원은 다른 알고리즘을 이용해 나온 퇴근시간 버스 승차인원에 비해 현저히 높은 수치의 값이 보여진다. 따라서 AdaBoost는 이 연구에는 적합하지 않은 알고리즘이다. 한가지 아쉬운점이 있다면 실제 2019년 10월 제주도 버스 퇴근시간 승차인원 정보를 구할수 없어 알고리즘들을 이용해 예측한 퇴근시간 승차인원과 비교할 수가 없었다. 
+
 
  * 추가 데이터  
 많은 데이터 중 유가 정보가 퇴근시간 버스 승차인원 예측에 영향을 줄 수 있다고 생각한다. 날짜별 유가 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 1일 ~ 2019년 10월 16일 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 이용한다.  
@@ -61,11 +60,12 @@
 > 
 > 유가 정보 추가 후  
 > <img src = "https://user-images.githubusercontent.com/71176581/192409679-2f61c235-52c0-480a-b4af-056bcd75f929.png" weight = "450" height = "300">  
-> 유가 정보를 추가하고나서 전반적으로 임시 스코어와 상관계수 값이 높아져 퇴근시간 버스 승차인원을 더 정확하게 예측할 수 있다.  
+> 유가 정보를 추가하고나서 전반적으로 임시 스코어와 상관계수 값이 높아져 퇴근시간 버스 승차인원을 더 정확하게 예측할 수 있다.  * 결론  
+> AdaBoost를 이용해 구한 10월 퇴근시간 버스 승차인원은 다른 알고리즘을 이용해 나온 퇴근시간 버스 승차인원에 비해 현저히 높은 수치의 값이 보여진다. 따라서 AdaBoost는 이 연구에는 적합하지 않은 알고리즘이다. 한가지 아쉬운점이 있다면 실제 2019년 10월 제주도 버스 퇴근시간 승차인원 정보를 구할수 없어 알고리즘들을 이용해 예측한 퇴근시간 승차인원과 비교할 수가 없었다. 
 
 
 * 추가 연구  
-앞서 진행했던 연구는 2019년 10월 퇴근시간 버스 승차 인원을 예측하기 위해 RandomForest, AdaBoost, LightGBM 알고리즘을 사용했다. 이를 통해 알고리즘 간 
+앞서 진행했던 연구는 2019년 10월 퇴근시간 버스 승차 인원을 예측하기 위해 RandomForest, AdaBoost, LightGBM 알고리즘을 사용했다. 이를 통해 버스 승차 인원 예측에 영향을 줄 수있는 데이터를 추가하여 알고리즘 간 RMSE, 상관관계를 구해 알고리즘 별 성능을 비교하고자 한다.
 
 앞서 진행했던 연구는 2019년 10월 퇴근시간 버스 승차 인원의 실제 정보가 없어서 실제 예측했던 모델의 정확도를 판단하기에는 어려웠다. 따라서 2019년 9월 한달간 제주도 버스 정류장별 날짜별 실제 퇴근시간 버스 승차 인원 정보와 예측했던 퇴근시간 버스 승차 인원정보가 얼마나 정확하게 예측했는지 알아보고자 추가 연구를 진행하게 되었다.  
 입력 데이터는 train.csv에서 2019년 9월 날짜별 정류장, 버스 노선, 시간대별 승차인원과 2019년 9월 한달 간 제주도 유가, 날씨정보를 추가로 이용한다. 출력 데이터는 날짜별 저녁 승차 인원이다.  
@@ -92,14 +92,13 @@ scikit-learn에서 제공하는 train_test_split를 이용하여 학습 데이�
 ![image](https://user-images.githubusercontent.com/71176581/192127130-269a80a2-f621-4c25-989e-2a2df77400ee.png)  
 
 * GridSearchCV  
-GridSearchCV는 scikit-learn에서 분류, 회귀 알고리즘에 사용되는 하이퍼파라미터를 순차적으로 입력해 학습,측정 과정을 통해 가장 적합한 파라미터를 알려주는 것이다. 위 연구에서 퇴근시간 버스 승차인원을 예측하는데 좋은 성능을 보였던 Randomforest, AdaBoost, LightGBM 알고리즘을 사용해 GridSearchCV를 진행했다. 그 결과는 다음과 같다.
+GridSearchCV는 scikit-learn에서 분류, 회귀 알고리즘에 사용되는 하이퍼파라미터를 순차적으로 입력해 학습,측정 과정을 통해 가장 적합한 파라미터를 알려주는 것이다. 위 연구에서 퇴근시간 버스 승차인원을 예측하는데 사용했던 Randomforest, AdaBoost, LightGBM 알고리즘을 사용해 GridSearchCV를 진행했다. 그 결과는 다음과 같다.
 > RandomForest  
 > ![image](https://user-images.githubusercontent.com/71176581/191989735-22b0ef33-8ce1-4da5-ab6e-bad906ae0a34.png)  
 > AdaBoost  
 > ![image](https://user-images.githubusercontent.com/71176581/191989958-c1f962d8-7a06-4fa3-af3d-37b44a618100.png)  
 > LightGBM  
 ![image](https://user-images.githubusercontent.com/71176581/191990363-3c4c92cc-9d8a-4436-9e82-9a47006204ba.png)  
-각 알고리즘별 하이퍼파라미터별 RMSE를 구해 그 중 RMSE가 가장 작게 나온 파라미터를 이용하여 각 알고리즘을 학습한다.
 
 * 성능 비교 
 train.csv에 유가, 날씨 요소를 추가한 데이터를 이용해 RandomForest, AdaBoost, LightGBM 별 5번의 교차검증을 통해 생성된 RMSE값과 평균값을 구한다.  (train.csv에서의 요소들을 통틀어 dacon이라는 명칭을 사용한다.)  
