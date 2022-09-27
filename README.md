@@ -33,18 +33,18 @@
 
 * 알고리즘 별 모델 상관계수, 임시 스코어  
 여기서 말하는 임시 스코어는 Dacon 사이트에 학습한 모델 파일을 제출했을 때 보이는 public score RMSE로 과적합을 방지하여 실제 값과 차이를 구한 스코어를 기준으로 연구를 진행한다.  
-
-![image](https://user-images.githubusercontent.com/71176581/192128088-770db020-0c36-474b-9e2c-003f33897783.png)
-<img src="https://user-images.githubusercontent.com/71176581/192128354-575c5e4d-5c61-4fa7-9f80-3eb231b70f0a.png" weight = "350" height = "200">
-<img src="https://user-images.githubusercontent.com/71176581/192128300-4248b41c-1b6c-4a42-b779-10209f20a42a.png" weight = "300" height = "200">
-
-![image](https://user-images.githubusercontent.com/71176581/192128096-0b7d3d2e-2e59-4ee5-8b3f-c7935038aadb.png)
-<img src ="https://user-images.githubusercontent.com/71176581/192127892-ef1f7385-443d-4fbc-b619-8fd5ca7bc743.png" weight = "350" height = "200">
-<img src ="https://user-images.githubusercontent.com/71176581/192128206-5c0ab19a-41b8-4aea-80b5-64e4ab993141.png" weight = "300" height = "200">
-
-![image](https://user-images.githubusercontent.com/71176581/192128109-17f2546c-b6d4-43e6-a54b-4c47c3decbc3.png)
-<img src ="https://user-images.githubusercontent.com/71176581/192127965-5e60db5e-afe4-44ee-9c06-e76e99730ea0.png" weight = "350" height = "200">
-<img src ="https://user-images.githubusercontent.com/71176581/192128213-a6d23316-372b-4407-a613-60da874f2e8b.png" weight = "300" height = "200">
+> * RandomForest, LightGBM 상관계수·임시계수와 10월 퇴근시간 승차인원 예측
+> ![image](https://user-images.githubusercontent.com/71176581/192128088-770db020-0c36-474b-9e2c-003f33897783.png)
+> <img src="https://user-images.githubusercontent.com/71176581/192128354-575c5e4d-5c61-4fa7-9f80-3eb231b70f0a.png" weight = "350" height = "200">
+> <img src="https://user-images.githubusercontent.com/71176581/192128300-4248b41c-1b6c-4a42-b779-10209f20a42a.png" weight = "300" height = "200">
+> * RandomForest, LightGBM 상관계수·임시계수와 10월 퇴근시간 승차인원 예측
+> ![image](https://user-images.githubusercontent.com/71176581/192128096-0b7d3d2e-2e59-4ee5-8b3f-c7935038aadb.png)
+> <img src ="https://user-images.githubusercontent.com/71176581/192127892-ef1f7385-443d-4fbc-b619-8fd5ca7bc743.png" weight = "350" height = "200">
+> <img src ="https://user-images.githubusercontent.com/71176581/192128206-5c0ab19a-41b8-4aea-80b5-64e4ab993141.png" weight = "300" height = "200">
+> * RandomForest, LightGBM 상관계수·임시계수와 10월 퇴근시간 승차인원 예측
+> ![image](https://user-images.githubusercontent.com/71176581/192128109-17f2546c-b6d4-43e6-a54b-4c47c3decbc3.png)
+> <img src ="https://user-images.githubusercontent.com/71176581/192127965-5e60db5e-afe4-44ee-9c06-e76e99730ea0.png" weight = "350" height = "200">
+> <img src ="https://user-images.githubusercontent.com/71176581/192128213-a6d23316-372b-4407-a613-60da874f2e8b.png" weight = "300" height = "200">
 
 
 ![image](https://user-images.githubusercontent.com/71176581/192128186-94da5a77-d8a6-481d-9797-3fc628ef33ee.png)
@@ -86,11 +86,11 @@ GridSearchCV는 scikit-learn에서 분류, 회귀 알고리즘에 사용되는 �
 
 * 성능 비교 
 train.csv에 유가, 날씨 요소를 추가한 데이터를 이용해 RandomForest, AdaBoost, LightGBM 별 5번의 교차검증을 통해 생성된 RMSE값과 평균값을 구한다.  (train.csv에서의 요소들을 통틀어 dacon이라는 명칭을 사용한다.)  
-유가 Data Scaling 전  
-![image](https://user-images.githubusercontent.com/71176581/192081751-7ce780aa-eaea-4138-a1fd-ac6be69d2c30.png)  
-유가 Data Scaling 후  
-![image](https://user-images.githubusercontent.com/71176581/192081758-4d2133d9-9739-42e5-af46-96ea04d1c43c.png)  
-위 2개 그래프를 보면 유가 정보를 스케일링 전, 후 데이터를 이용해 생성된 RMSE가 크게 차이없는 것을 볼 수 있다. 따라서 유가 정보 스케일링 없어도 정확한 머신러닝 학습이 된다고 본다.  
+> 유가 Data Scaling 전  
+> ![image](https://user-images.githubusercontent.com/71176581/192081751-7ce780aa-eaea-4138-a1fd-ac6be69d2c30.png)  
+> 유가 Data Scaling 후  
+> ![image](https://user-images.githubusercontent.com/71176581/192081758-4d2133d9-9739-42e5-af46-96ea04d1c43c.png)  
+> 위 2개 그래프를 보면 유가 정보를 스케일링 전, 후 데이터를 이용해 생성된 RMSE가 크게 차이없는 것을 볼 수 있다. 따라서 유가 정보 스케일링 없어도 정확한 머신러닝 학습이 된다고 본다.  
 * 모델 앙상블  
 여러 모델들을 사용해 성능을 올려 더욱 일반화된 모델을 완성하는 기법으로, 대표적으로 Voting, Bagging, Stacking이 있다.  
 > Voting  
