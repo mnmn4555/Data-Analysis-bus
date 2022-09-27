@@ -53,8 +53,10 @@
  * 추가 데이터  
 많은 데이터 중 유가 정보가 퇴근시간 버스 승차인원 예측에 영향을 줄 수 있다고 생각한다. 날짜별 유가 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 1일 ~ 2019년 10월 16일 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 이용한다.  
 > * RandomForest, LightGBM, Gradient Tree Boosting(1,3번 이용) 상관계수·임시계수  
+>
 > 유가 정보 추가 전   
 > <img src = "https://user-images.githubusercontent.com/71176581/192409665-0bc39b4f-0d32-43be-b32b-396a6ecfde5a.png" weight = "450" height = "300">  
+> 
 > 유가 정보 추가 후  
 > <img src = "https://user-images.githubusercontent.com/71176581/192409679-2f61c235-52c0-480a-b4af-056bcd75f929.png" weight = "450" height = "300">  
 > 유가 정보를 추가하고나서 전반적으로 임시 스코어와 상관계수 값이 높아져 퇴근시간 버스 승차인원을 더 정확하게 예측할 수 있다.  
