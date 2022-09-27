@@ -1,8 +1,8 @@
 # Data-Analysis-bus (2022)
-## 버스 승객 예측
+## 제주도 버스 퇴근시간 승객 예측
 인하공업전문대학 컴퓨터정보공학과 김수림
-> Library : RandomForestm, AdaBoost, LightGBM, scikit-learn  
-> Environment :
+> Library : RandomForestm, AdaBoost, LightGBM, Gradient Tree Boosting, scikit-learn  
+> Environment : Google Colab, 국가슈퍼컴퓨팅센터-neuron
 ## Overview
 * 주제 선정  
 매년 제주도에 거주하는 인구수는 점점 증가하고, 관광을 목적으로 제주도를 방문하는 인구도 증가하는 추세다. 또한 제주도 일부 지역은 교통 체증이 서울보다 심각하다고 한다. 이런 경우에는 이동 인구를 사전에 예측하여 대중교통을 배치하면 시민들이 느끼는 불편함을 줄이고 교통체증도 완화 된다.
@@ -65,6 +65,8 @@
 
 
 * 추가 연구  
+앞서 진행했던 연구는 2019년 10월 퇴근시간 버스 승차 인원을 예측하기 위해 RandomForest, AdaBoost, LightGBM 알고리즘을 사용했다. 이를 통해 알고리즘 간 
+
 앞서 진행했던 연구는 2019년 10월 퇴근시간 버스 승차 인원의 실제 정보가 없어서 실제 예측했던 모델의 정확도를 판단하기에는 어려웠다. 따라서 2019년 9월 한달간 제주도 버스 정류장별 날짜별 실제 퇴근시간 버스 승차 인원 정보와 예측했던 퇴근시간 버스 승차 인원정보가 얼마나 정확하게 예측했는지 알아보고자 추가 연구를 진행하게 되었다.  
 입력 데이터는 train.csv에서 2019년 9월 날짜별 정류장, 버스 노선, 시간대별 승차인원과 2019년 9월 한달 간 제주도 유가, 날씨정보를 추가로 이용한다. 출력 데이터는 날짜별 저녁 승차 인원이다.  
 
@@ -122,4 +124,6 @@ train.csv에 유가, 날씨 요소를 추가한 데이터를 이용해 RandomFor
 * 알고리즘 간 상관관계  
 교차검증에 사용한 csv파일을 이용해 AdaBoost, RandomForest, LightGBM 알고리즘 간 상관관계는 다음과 같다. 그 결과 RandomForest와 LightGBM 알고리즘은 높은 상관도를 보이고 있고 AdaBoost는 다른 알고리즘과 낮은 상관도를 보이고 있다.
 > ![image](https://user-images.githubusercontent.com/71176581/192126559-ae19b6bd-7f97-44b7-994f-b5e22fbd2fe3.png)  
+
+* 결론 
 
