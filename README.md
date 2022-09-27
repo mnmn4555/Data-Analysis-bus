@@ -49,7 +49,7 @@
 > <img src = "https://user-images.githubusercontent.com/71176581/192128109-17f2546c-b6d4-43e6-a54b-4c47c3decbc3.png" weight = "100" height = "100">
 > <img src = "https://user-images.githubusercontent.com/71176581/192410672-f0981586-b124-4610-af36-f7bc4a404a9d.png" weight = "250" height = "200">
 > <img src ="https://user-images.githubusercontent.com/71176581/192128213-a6d23316-372b-4407-a613-60da874f2e8b.png" weight = "300" height = "200">  
-
+> AdaBoost를 이용해 구한 10월 퇴근시간 버스 승차인원은 다른 알고리즘을 이용해 나온 퇴근시간 버스 승차인원에 비해 현저히 높은 수치의 값이 보여진다. 따라서 AdaBoost는 이 연구에는 적합하지 않은 알고리즘이다. 한가지 아쉬운점이 있다면 실제 2019년 10월 제주도 버스 퇴근시간 승차인원 정보를 구할수 없어 알고리즘들을 이용해 예측한 퇴근시간 승차인원과 비교할 수가 없었다. 
 
  * 추가 데이터  
 많은 데이터 중 유가 정보가 퇴근시간 버스 승차인원 예측에 영향을 줄 수 있다고 생각한다. 날짜별 유가 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 1일 ~ 2019년 10월 16일 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 이용한다.  
@@ -61,8 +61,7 @@
 > 유가 정보 추가 후  
 > <img src = "https://user-images.githubusercontent.com/71176581/192409679-2f61c235-52c0-480a-b4af-056bcd75f929.png" weight = "450" height = "300">  
 > 유가 정보를 추가하고나서 전반적으로 임시 스코어와 상관계수 값이 높아져 퇴근시간 버스 승차인원을 더 정확하게 예측할 수 있다.  * 결론  
-> AdaBoost를 이용해 구한 10월 퇴근시간 버스 승차인원은 다른 알고리즘을 이용해 나온 퇴근시간 버스 승차인원에 비해 현저히 높은 수치의 값이 보여진다. 따라서 AdaBoost는 이 연구에는 적합하지 않은 알고리즘이다. 한가지 아쉬운점이 있다면 실제 2019년 10월 제주도 버스 퇴근시간 승차인원 정보를 구할수 없어 알고리즘들을 이용해 예측한 퇴근시간 승차인원과 비교할 수가 없었다. 
-
+>
 
 * 추가 연구  
 앞서 진행했던 연구는 2019년 10월 퇴근시간 버스 승차 인원을 예측하기 위해 RandomForest, AdaBoost, LightGBM 알고리즘을 사용했다. 이를 통해 버스 승차 인원 예측에 영향을 줄 수있는 데이터를 추가하여 알고리즘 간 RMSE, 상관관계를 구해 알고리즘 별 성능을 비교하고자 한다.
@@ -116,7 +115,7 @@ train.csv에 유가, 날씨 요소를 추가한 데이터를 이용해 RandomFor
 > Bagging (Bootstrap Aggregating)  
 > 여러 개의 데이터 중첩을 허용하여 샘플 중복 생성을 통해 결과를 도출하는 방식으로 AdaBoost, RandomForest, LightGBM 각각 알고리즘을 5번 교차검증하여 RMSE 평균값을 구한다.
 > ![image](https://user-images.githubusercontent.com/71176581/192081792-07f4c33b-06ab-4ab5-ae54-918b577cb2f2.png)  
-> Voting  
+> Stacking  
 > 여러 모델을 기반으로 예측된 결과를 통해 meta 모델이 다시 한번 예측하는 방식으로 AdaBoost, RandomForest, LightGBM 중 1개 모델을 meta 모델로 지정하여 5번의 교차검증을 통해 RMSE 평균값을 구한다.  
 > ![image](https://user-images.githubusercontent.com/71176581/192081872-3af0b689-e9a1-4672-bd11-79865c2eb1ee.png)  
 
@@ -125,4 +124,4 @@ train.csv에 유가, 날씨 요소를 추가한 데이터를 이용해 RandomFor
 > ![image](https://user-images.githubusercontent.com/71176581/192126559-ae19b6bd-7f97-44b7-994f-b5e22fbd2fe3.png)  
 
 * 결론 
-
+선행연구에 사용된 알고리즘들을 GridSearchCV를 통해 최적 하이퍼파라미터를 구했다. 기존 데이터에 버스 승차 인원 예측에 영향을 미칠 수 있는 요인 중 날짜별 유가와 날씨 정보를 추가하였다. 추가 데이터 중 유가가 다른 요인에 비해 수치가 커 정확한 예측할수 없다고 생각해 데이터 스케일링을 통해서 범위를 축소시켰다. 그러나 예상과 달리 데이터 스케일링 전후 RMSE값의 차이가 미미했고 유가 정보 스케일링 하지 않아도 정확한 학습이 된다고 본다. 동일한 입력 데이터에서 RandomForest, AdaBoost, LightGBM 마다 성능을 비교하기 위해서 RMSE, 알고리즘 간의 상관계수를 비교했다. RandomForest는 dacon+oil 데이터, AdaBoost
