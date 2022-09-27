@@ -36,17 +36,17 @@
 > 1. RandomForest, LightGBM 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
 > 
 > <img src ="https://user-images.githubusercontent.com/71176581/192128088-770db020-0c36-474b-9e2c-003f33897783.png" weight = "100" height = "100">
-> <img src ="https://user-images.githubusercontent.com/71176581/192410519-4eb5f12e-dd36-4a16-9838-d660d3aedc3e.png" weight = "350" height = "200">
+> <img src ="https://user-images.githubusercontent.com/71176581/192410519-4eb5f12e-dd36-4a16-9838-d660d3aedc3e.png" weight = "250" height = "200">
 > <img src ="https://user-images.githubusercontent.com/71176581/192128300-4248b41c-1b6c-4a42-b779-10209f20a42a.png" weight = "300" height = "200">  
 > 2. AdaBoost 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
 > 
 > <img src ="https://user-images.githubusercontent.com/71176581/192128096-0b7d3d2e-2e59-4ee5-8b3f-c7935038aadb.png" weight = "100" height = "100">
-> <img src ="https://user-images.githubusercontent.com/71176581/192410590-be527a97-3f1f-423a-91ac-bb1016d168cc.png" weight = "350" height = "200">
+> <img src ="https://user-images.githubusercontent.com/71176581/192410590-be527a97-3f1f-423a-91ac-bb1016d168cc.png" weight = "250" height = "200">
 > <img src ="https://user-images.githubusercontent.com/71176581/192128206-5c0ab19a-41b8-4aea-80b5-64e4ab993141.png" weight = "300" height = "200">  
 > 3. Gradient Tree Boosting 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
 > 
 > <img src = "https://user-images.githubusercontent.com/71176581/192128109-17f2546c-b6d4-43e6-a54b-4c47c3decbc3.png" weight = "100" height = "100">
-> <img src = "https://user-images.githubusercontent.com/71176581/192410672-f0981586-b124-4610-af36-f7bc4a404a9d.png" weight = "350" height = "200">
+> <img src = "https://user-images.githubusercontent.com/71176581/192410672-f0981586-b124-4610-af36-f7bc4a404a9d.png" weight = "250" height = "200">
 > <img src ="https://user-images.githubusercontent.com/71176581/192128213-a6d23316-372b-4407-a613-60da874f2e8b.png" weight = "300" height = "200">  
 > AdaBoost를 이용해 구한 10월 퇴근시간 버스 승차인원은 다른 알고리즘을 이용해 나온 퇴근시간 버스 승차인원에 비해 현저히 높은 수치의 값이 보여진다. 따라서 AdaBoost는 이 연구에는 적합하지 않은 알고리즘이다. 한가지 아쉬운점이 있다면 실제 2019년 10월 제주도 버스 퇴근시간 승차인원 정보를 구할수 없어 알고리즘들을 이용해 예측한 퇴근시간 승차인원과 비교할 수가 없었다. 
 
