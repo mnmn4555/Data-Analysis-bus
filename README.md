@@ -27,7 +27,6 @@
 ![image](https://user-images.githubusercontent.com/71176581/191956529-54f431b4-a272-4ccd-a1a4-fbad63f3f084.png)     
 머신러닝 모델에 입력으로 들어갈 변수는 숫자 형태여야 하므로 숫자 형태가 아닌 변수를 제거하고 변수명 df 에 저장한다. 그런 다음, df 데이터를 모델 학습하기 위한 학습데이터와 학습데이터를 테스트하기 위한 테스트 데이터로 나눈다.  
 학습데이터, 테스트 데이터를 구분하는 cue 변수가 0인 경우 X_train으로, 1인 경우 X_test로 정의하고 훈련에 사용할 변수를 cue 값이 0인 경우의 18-20시에 버스 승차 인원수(18~20_ride)를 y_train으로 정의한다.  
-
 머신러닝 모델을 훈련하기 위해 여러 개의 모델을 적절하게 결합해 최종값을 도출하는 앙상블 모델을 이용한다. 모델 구축에 사용할 데이터는 다음과 같다.  
 ![image](https://user-images.githubusercontent.com/71176581/192127642-fb255611-bff7-41dc-a591-e02bc46b7211.png)  
 이 연구에는 Random Forest, LightGBM, Adaboost, Gradient Tree Boosting 라이브러리를 사용하여 머신러닝 모델을 훈련한다.  
