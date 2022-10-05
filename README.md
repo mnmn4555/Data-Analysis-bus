@@ -33,7 +33,7 @@
 ![image](https://user-images.githubusercontent.com/71176581/192127642-fb255611-bff7-41dc-a591-e02bc46b7211.png)  
 이 연구에는 Random Forest, LightGBM, Adaboost, Gradient Tree Boosting 라이브러리를 사용하여 머신러닝 모델을 훈련한다.  
 
-* 알고리즘 별 모델 상관계수, 임시 스코어  
+##[알고리즘 별 모델 상관계수, 임시 스코어, 10월 퇴근시간 버스 승차인원 예측](https://github.com/mnmn4555/Data-Analysis-bus/blob/main/%EB%B2%84%EC%8A%A4%EC%8A%B9%EC%B0%A8%EC%9D%B8%EC%9B%90%EC%98%88%EC%B8%A1.ipynb)
 여기서 말하는 임시 스코어는 Dacon 사이트에 학습한 모델 파일을 제출했을 때 보이는 public score RMSE로 과적합을 방지하여 실제 값과 차이를 구한 스코어를 기준으로 연구를 진행한다.  
 > 1. RandomForest, LightGBM 상관계수·임시계수와 10월 퇴근시간 버스 승차인원 예측  
 > 
