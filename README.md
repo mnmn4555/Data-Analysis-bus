@@ -52,7 +52,7 @@
 > <img src ="https://user-images.githubusercontent.com/71176581/192128213-a6d23316-372b-4407-a613-60da874f2e8b.png" weight = "300" height = "200">  
 > AdaBoost를 이용해 구한 10월 퇴근시간 버스 승차인원은 다른 알고리즘을 이용해 나온 퇴근시간 버스 승차인원에 비해 현저히 높은 수치의 값이 보여진다. 따라서 AdaBoost는 이 연구에는 적합하지 않은 알고리즘이다. 한가지 아쉬운점이 있다면 실제 2019년 10월 제주도 버스 퇴근시간 승차인원 정보를 구할수 없어 알고리즘들을 이용해 예측한 퇴근시간 승차인원과 비교할 수가 없었다. 
 
- * 추가 데이터  
+ ### [추가 데이터 - 유가정보](https://github.com/mnmn4555/Data-Analysis-bus/blob/main/%EB%AA%A8%EB%8D%B8%EA%B5%AC%EC%B6%95.ipynb)  
 많은 데이터 중 유가 정보가 퇴근시간 버스 승차인원 예측에 영향을 줄 수 있다고 생각한다. 날짜별 유가 정보를 제공해주는 사이트인 Opinet을 이용하여 2019년 9월 1일 ~ 2019년 10월 16일 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 이용한다.  
 > * RandomForest, LightGBM, Gradient Tree Boosting(1,3번 이용) 상관계수·임시계수  
 >
