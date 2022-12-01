@@ -1,7 +1,7 @@
 # Data-Analysis-bus (2022)
 ## 제주도 버스 퇴근시간 승객 예측
 인하공업전문대학 컴퓨터정보공학과 김수림
-> Library : RandomForestm, AdaBoost, LightGBM, Gradient Tree Boosting, scikit-learn  
+> Library : RandomForest, AdaBoost, LightGBM, Gradient Tree Boosting, scikit-learn  
 > Environment : Google Colab, 국가슈퍼컴퓨팅센터-neuron
 ## Overview
 * 주제 선정  
