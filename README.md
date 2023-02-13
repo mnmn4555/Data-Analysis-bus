@@ -54,7 +54,8 @@
 
  ### [추가 데이터 - 유가정보](https://github.com/mnmn4555/Data-Analysis-bus/blob/main/%EB%AA%A8%EB%8D%B8%EA%B5%AC%EC%B6%95.ipynb)  
 많은 데이터 중 유가 정보가 퇴근시간 버스 승차인원 예측에 영향을 줄 수 있다고 생각한다. 날짜별 유가 정보를 제공해주는 사이트인
-### [Opinet](https://www.opinet.co.kr/user/dopospdrg/dopOsPdrgAreaSelect.do) 을 이용하여 2019년 9월 1일 ~ 2019년 10월 16일 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 이용한다.  
+### [Opinet](https://www.opinet.co.kr/user/dopospdrg/dopOsPdrgAreaSelect.do)  
+을 이용하여 2019년 9월 1일 ~ 2019년 10월 16일 제주도 주유소 평균 휘발유, 경유 판매가격(￦)을 이용한다.  
 > * RandomForest, LightGBM, Gradient Tree Boosting(1,3번 이용) 상관계수·임시계수  
 >
 > 유가 정보 추가 전   
